@@ -62,3 +62,11 @@
 # name = "world"
 # program = "python"
 # print("This is {program} Hello {name}!".format(name=name, program=program))
+
+# string = 'bem vindo ao a disciplina de python'
+# print(string.find('disciplina'))
+# print('vindo' in string)
+
+palavras = ['bem', 'vindo', 'a', 'disciplina', 'de', 'python']
+# print(type(palavras))
+print('-'.join(palavras))
