@@ -67,6 +67,6 @@
 # print(string.find('disciplina'))
 # print('vindo' in string)
 
-palavras = ['bem', 'vindo', 'a', 'disciplina', 'de', 'python']
-# print(type(palavras))
-print('-'.join(palavras))
+# palavras = ['bem', 'vindo', 'a', 'disciplina', 'de', 'python']
+# # print(type(palavras))
+# print('-'.join(palavras))
