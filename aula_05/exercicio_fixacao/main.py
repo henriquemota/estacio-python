@@ -1,5 +1,6 @@
 import alunos
 import turmas
+import matriculas
 from util import clear
 from database import initdb
 
@@ -17,6 +18,7 @@ def mainmenu():
     print('6. Buscar turma')
     print('7. Atualizar dados de uma turma')
     print('8. Excluir turma')
+    print('9. Matricular aluno em turma')
 
     option = input('informe a opção desejada: ')
 
@@ -36,6 +38,8 @@ def mainmenu():
         turmas.update()
     elif option == '8':
         turmas.delete()
+    elif option == '9':
+        matriculas.insert()
     else:
         print('fim')
 
