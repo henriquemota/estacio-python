@@ -25,6 +25,43 @@ def insert():
         cx.close()
 
 
+def update():
+    try:
+        matricula = input('informe sua matricula: ')
+        nome = input('informe seu nome: ')
+        nascimento = input('informe seu nascimento: ')
+        sexo = input('informe seu sexo: ')
+
+        sql = 'update alunos set nome = ?, nascimento = ?, sexo = ? where matricula = ?;'
+        cx = sqlite.connect(db_filename)
+        db_cur = cx.cursor()
+        db_cur.execute(sql, [nome, nascimento, sexo, matricula])
+        cx.commit()
+        print('aluno atualizado com sucesso.')
+    except err:
+        print(err)
+    finally:
+        db_cur.close()
+        cx.close()
+
+
+def delete():
+    try:
+        matricula = input('informe sua matricula: ')
+
+        sql = 'delete from alunos where matricula = ?;'
+        cx = sqlite.connect(db_filename)
+        db_cur = cx.cursor()
+        db_cur.execute(sql, [matricula])
+        cx.commit()
+        print('aluno excluído com sucesso.')
+    except err:
+        print(err)
+    finally:
+        db_cur.close()
+        cx.close()
+
+
 def fetch():
     try:
         matricula = input('informe sua matricula: ')
