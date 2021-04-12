@@ -17,7 +17,6 @@ def initdb():
         cx = sqlite.connect(db_filename)
         print('iniciando o cursor')
         db_cur = cx.cursor()
-
         print('criando a tabela do banco de dados')
         db_cur.execute(tb_nascimento)
     except err:
